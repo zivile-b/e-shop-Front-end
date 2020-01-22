@@ -1,0 +1,26 @@
+.btn-main {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-ice{
+    color: #fff;
+    box-shadow: inset 0px 0px 20px #fff;
+    outline: none;
+    border-radius: 10px;
+    font-size: 24px;
+    transition: 0.5s;
+}
+
+.btn-ice:hover{
+    box-shadow: inset 0px 0px 40px #fff;
+}

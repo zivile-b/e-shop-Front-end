@@ -1,0 +1,249 @@
+.career{
+    background-color: #131114;
+    position: relative;
+    height: unset;
+    min-height: calc(100vh + 80px);
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.container-career {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h3.title-career {
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.column {
+    display: inline-block;
+    background-color: #000;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.form-row {
+    color: #fff;
+    font-size: 20px;
+    line-height: 30p;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 900;
+}
+
+.form-row > label {
+    width: 100px;
+}
+
+.form-row > input, .form-row > textarea {
+    border: none;
+    color: #fff;
+    width: 300px;
+    height: 50px ;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    justify-content: end;
+    margin: 8px 0px;
+    outline: none;
+    background-color: transparent;
+    box-shadow: inset 0px 0px 50px rgb(133, 129, 134);
+}
+
+.form-row > textarea {
+    color: #fff;
+    margin-right: 0px;
+}
+
+#submit-career {
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 205px;
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 35px;
+    border-radius: 20px;    
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 300px;
+    min-width: 300px;
+    font-size: 16px;
+    line-height: 20px;
+    resize: vertical;
+}
+
+
+.circle {
+    font-size: 18px;
+    font-weight: 900;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    text-align: center;
+    animation: rainbow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    background-color: transparent;
+    box-shadow: inset 0px 0px 50px #000;
+    color:#fff;
+}
+
+.circle1 {
+    animation: rainbow1;
+    font-size: 18px;
+    font-weight: 900;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    text-align: center;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    background-color: transparent;
+    box-shadow: inset 0px 0px 50px #000;
+}
+
+.cars img {
+    width: 100px;
+    height: 60px;
+    position: absolute;
+    bottom: 20px;
+    left: -50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 8s;
+}
+
+.cars {
+    height: 100px;
+} 
+
+
+
+@keyframes rainbow{
+    0% { 
+        border-top-left-radius: 10%;
+        border-bottom-right-radius: 20%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+    50% {
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 45%;
+        border-top-right-radius: 5%;
+        border-bottom-left-radius: 25%;
+    }
+    100% {
+        border-top-left-radius: 10%;
+        border-bottom-right-radius: 20%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+}
+
+@keyframes rainbow1{
+    0% { 
+        border-bottom-left-radius: 10%;
+        border-top-right-radius: 20%;
+        border-bottom-right-radius: 50%;
+        border-top-left-radius: 50%;
+    }
+    50% {
+        border-bottom-left-radius: 50%;
+        border-top-right-radius: 45%;
+        border-bottom-right-radius: 5%;
+        border-top-left-radius: 25%;
+    }
+    100% {
+        border-bottom-left-radius: 10%;
+        border-top-right-radius: 20%;
+        border-bottom-right-radius: 50%;
+        border-top-left-radius: 50%;
+    }
+}
+
+@media all and (max-width: 1000px) {
+
+    .container-career {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h3.title-career {
+        padding-bottom: 0px;
+    }
+
+    .circle  { 
+        margin: 30px 0;
+    } 
+
+    .cars {
+        height: 100px;
+    } 
+}
+
+@media all and (max-width: 600px) {
+
+    .career{
+        padding-top: 10px;
+    }
+
+
+    .container-career {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .column {
+        display: block;
+        padding: 8px;
+    }
+
+    .form-row {
+            width: 300px;
+    }
+
+    .form-row > label {
+        width: 70px;
+        margin-right: 8px;
+    }
+    
+    .form-row > input, .form-row > textarea {
+        width: 200px;
+        height: 50px ;
+        font-size: 14px;
+        line-height: 16px;
+        margin: 8px 0px;
+    }
+
+    textarea {
+        min-width: 200px;
+    }
+
+    #submit-career {
+        margin-right: 160px;
+    }
+    
+    .circle  {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }  
+
+}

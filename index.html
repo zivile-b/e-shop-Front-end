@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
+    <title>Food trucks</title>
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/button.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/map.css">
+    <link rel="stylesheet" href="./css/about_us.css">
+    <link rel="stylesheet" href="./css/career.css">
+    <link rel="stylesheet" href="./css/contacts.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <!-- **********HEADER NAVIGATION********** -->
+
+    <header>
+        <a class="fa fa-truck fa-2x logo"></a>
+        <div class="burger-nav" onclick="displayBurger();">
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav id="main-nav">
+            <div class="dropdown link-item">
+                <a class="link-item" href="#">Food trucks</a>
+                <div id="dropdown-trucks"></div>
+            </div>
+            <a class="link-item" href="index.html#meniuId">Meniu</a>
+            <a class="link-item" href="index.html#mapId">Map</a>
+            <a class="link-item" href="index.html#about-cont">About us</a>
+            <a class="link-item" href="index.html#career-cont">Career</a>
+            <a class="link-item" href="index.html#contacts">Contacts</a>
+            <a class="link-item" href="login/login.html">Log in</a>
+        </nav>
+    </header>
+
+    <!-- ******************** HERO ******************** -->
+
+    <div class="container hero">
+        <a href="#dropdownToSpecialOffers">
+            <div class="heroSlideshow">
+                <img id="slide0" src="./img/BuritoLogo.png" alt="Burito">
+                <img id="slide1" src="./img/BurgerLogo.png" alt="Burger">
+                <img id="slide2" src="./img/sushilogo.png" alt="Sushi">
+            </div>
+        </a>
+        <div>
+            <input type="button" onclick="showHiddenMenu();" class="btn-ice btn-main seemore" value="Visit full menu">
+        </div>
+    </div>
+
+
+    <!--******************** MENU ********************-->
+    <div class="container menu">
+        <a id="dropdownToSpecialOffers">
+            <a id="meniuId"></a>
+        </a>
+        <div class="meniu_row">
+            <h3>Special offers</h3>
+        </div>
+        <div class="offerContainer" id="specialOffers"></div>
+    </div>
+
+    <!--******************** HIDDEN MENU ********************-->
+
+    <div class="container hidden" id="hdMenu">
+
+        <div class="hidden-left">
+            <div class="hidden-navigation">
+                <div onclick="hiddenFunction(1); genMenuTruckContacts(0)" class="hd-transition hidden-btn menubtn1">Burito Republic
+                    <div id="hid1" class="menu-dropdown">
+                        <a class="hd-transition" onclick="renderMenu('truck1', 'HotDishes')">Hot Dishes</a>
+                        <a class="hd-transition" onclick="renderMenu('truck1', 'Tacos')">Tacos</a>
+                        <a class="hd-transition" onclick="renderMenu('truck1', 'Drinks')">Drinks</a>
+                    </div>
+                </div>
+                <div onclick="hiddenFunction(2); genMenuTruckContacts(1)" class="hd-transition hidden-btn menubtn2">John's burgers
+                    <div id="hid2" class="menu-dropdown">
+                        <a class="hd-transition" onclick="renderMenu('truck2', 'Burgers')">Burgers</a>
+                        <a class="hd-transition" onclick="renderMenu('truck2', 'Snacks')">Snacks</a>
+                        <a class="hd-transition" onclick="renderMenu('truck2', 'Drinks')">Drinks</a>
+                    </div>
+                </div>
+                <div onclick="hiddenFunction(3); genMenuTruckContacts(2)" class="hd-transition hidden-btn menubtn3">Yoko sushi
+                    <div id="hid3" class="menu-dropdown">
+                        <a class="hd-transition" onclick="renderMenu('truck3', 'Sushi')">Sushi</a>
+                        <a class="hd-transition" onclick="renderMenu('truck3', 'Soups')">Soups</a>
+                        <a class="hd-transition" onclick="renderMenu('truck3', 'Drinks')">Drinks</a>
+                    </div>
+                </div>
+                <div id="left-menu"></div>
+
+            </div>
+
+        </div>
+
+        <div class="hidden-right">
+            <div class='rightTop'>
+                <div class="menuContacts">Contacts</div>
+                <div class="rightPosition">
+                    <div id="truckMenu1"> </div>
+                </div>
+            </div>
+            <div class='rightBottom'>
+                <div id="shopCart"></div>
+                <div id="total">Total:</div>
+                <input class='btn-main shopPlace' type="button" value="Order now" onclick="checkout();">
+            </div>
+        </div>
+    </div>
+    <!-- ******************** MAP ******************** -->
+
+    <div class="container map">
+        <a id="mapId">
+            <div class="map_row">
+                <h3> Places where you can find us!</h3>
+            </div>
+        </a>
+        <div class="gmap">
+            <div class="pinPop" id="pingas1" onclick="popFunction()">
+                <img class="pin1" src="./img/pin.png" alt="pin1">
+                <span class="popUpWindow" id="popupas"><img src="img/BuritoLogo.png" alt="logo"> </span>
+            </div>
+            <div class="pinPop" id="pingas2" onclick="popFunction1()">
+                <img class="pin1" src="./img/pin.png" alt="pin2">
+                <span class="popUpWindow" id="popupas1"><img src="img/BurgerLogo.png" alt="logo"> </span>
+            </div>
+            <div class="pinPop" id="pingas3" onclick="popFunction2()">
+                <img class="pin1" src="./img/pin.png" alt="pin3">
+                <span class="popUpWindow" id="popupas2"><img src="img/sushilogo.png" alt="logo"> </span>
+            </div>
+        </div>
+        <div ><img class="mobileMap" src="./img/MobileMap.png" alt="photo"></div>
+    </div>
+
+
+
+    <!--******************** ABOUT US ********************-->
+
+    <div id="about-cont" class="about container">
+        <!-- <div class="about-item">
+            <img src="./img/mexicano.jpg" alt="Nuotrauka T1">
+            <p><span></span></p>
+        </div>
+        <div class="about-item">
+            <img src="./img/mexicano.jpg" alt="Nuotrauka T2">
+            <p><span></span></p>
+        </div>
+        <div class="about-item">
+            <img src="./img/mexicano.jpg" alt="Nuotrauka T3">
+            <p><span></p>
+        </div> -->
+    </div>
+
+    <!--******************** CAREER ********************-->
+
+    <div id="career-cont" class="container career">
+        <h3 class="title-career">Career</h3>
+        <div class="container-career">
+            <div class="column circle circle1">
+                <p>Join with your Food Truck</p>
+            </div>
+            <div class="column">
+                <form>
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text">
+                    </div>
+                    <div class="form-row">
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" type="email">
+                    </div>
+                    <div class="form-row">
+                        <label for="mobile">Phone</label>
+                        <input id="mobile" name="mobile" type="text">
+                    </div>
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <input id="submit-career" class="btn-submit" type="submit" name="btnSubmit" value="Submit">
+                    </div>
+                </form>
+            </div>
+            <div class="column circle">
+                <p>Join us!!!</p>
+                <p>We are waiting You!</p>
+            </div>
+        </div>
+        <div class="cars">
+            <img id='car0' src="./img/trucks/t1.png" alt="Truck">
+            <img id='car1' src="./img/trucks/t2.png" alt="Truck">
+            <img id='car2' src="./img/trucks/t3.png" alt="Truck">
+            <img id='car3' src="./img/trucks/t4.png" alt="Truck">
+            <img id='car4' src="./img/trucks/t5.png" alt="Truck">
+            <img id='car5' src="./img/trucks/t6.png" alt="Truck">
+        </div>
+    </div>
+
+    <!--******************** CONTACTS ********************-->
+    <div id="contacts" class="contacts container">
+        <div class="titleCon">
+            <h1>Contacts</h1>
+        </div>
+        <div class="contactsCon" id="truckContacts"></div>
+    </div>
+    <!--******************** FOOTER ********************-->
+
+    <div class="container foot">
+        <div class="socials">
+            <a href="https://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.twitter.com" target="_blank" class="fa fa-twitter"></a>
+            <a href="https://www.linkedin.com" target="_blank" class="fa fa-linkedin"></a>
+            <a href="https://www.youtube.com" target="_blank" class="fa fa-youtube-play"></a>
+            <a href="https://www.instagram.com" target="_blank" class="fa fa-instagram"></a>
+            <a href="https://www.google.com/search?sxsrf=ACYBGNSZ5yjEtfLtScpsj9T9InWvveRMtA%3A1574686019812&ei=Q83bXfuNMYWcsAf7vL_wCg&q=why+people+don%27t+use+rss&oq=why+people+don%27t+use+rss&gs_l=psy-ab.3..35i39.9123.10119..10452...1.0..0.109.109.0j1......0....1j2..gws-wiz.....10..35i362i39._GRcGyWFabs&ved=0ahUKEwi7u9_GsoXmAhUFDuwKHXveD64Q4dUDCAs&uact=5"
+                target="_blank" class="fa fa-rss"></a>
+        </div>
+        <div class="fcontacts">
+            <h4>UAB "Maisto furgonai"</h4>
+            <p>Phone: <a href="tel:+37061000000">+37061000000</a></p>
+            <p>E-mail: <a href="mailto:info@foodtrucks.lt" target="_blank">info@foodtrucks.lt</a></p>
+            <p>Code: 302964057 VAT code: LT100008128215</p>
+        </div>
+        <div class="copyright">
+            <p>&copy; Muškienininkai</p>
+        </div>
+    </div>
+
+
+    <!--******************** SCRIPTS ********************-->
+    <script src="./js/data.js"></script>
+    <script src="./js/function.js"></script>
+    <script src="./js/action.js"></script>
+</body>
+
+</html>

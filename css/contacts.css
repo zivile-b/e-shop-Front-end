@@ -1,0 +1,105 @@
+.contacts {
+    width: 800px;
+    color: white;
+    margin: 0 calc(( 100% - 800px) / 2);
+    height: unset;
+    /* min-height: 400px; */ /* Nes pasidaro didelis tarpas esant desktopo rezoliucijoje */  
+}
+
+.contacts>.titleCon {
+    text-align: center;
+    background-color: transparent;
+    padding-top: 10px;
+}
+
+.contacts>.contactsCon {
+    display: inline-block;
+    width: 800px;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.contacts>.contactsCon img {
+    height: 40px;
+}
+
+.contacts>.contactsCon>.truck-info {
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+    width: 30%;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: black 0px 0px 10px;
+}
+
+.contacts>.contactsCon>.truck-info h5 {
+    text-transform: uppercase;
+}
+
+.contactsCon a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+@media (max-width: 1000px) {
+    .contacts {
+        width: 600px;
+        margin: 0 calc(( 100% - 600px) / 2);
+    }
+    .contacts>.contactsCon {
+        display: inline-block;
+        width: 100%;
+        background-color: transparent;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 750px) {
+    .contacts {
+        width: 500px;
+        margin: 0 calc( (50% - 250px));
+    }
+    .contacts>.contactsCon {
+        width: 100%;
+        margin: 0 0;
+        padding: 10px 0px;
+    }
+    .contacts>.contactsCon>.truck-info {
+        display: inline-block;
+        width: 100%;
+        margin: 0px 0px;
+        padding: 10px 0px;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 15px;
+        box-shadow: black 0px 0px 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .contacts {
+        width: 300px;
+        margin: 0 calc( (50% - 150px));
+    }
+    .contacts>.contactsCon>.truck-info {
+        width: 100%;
+        margin: 0px 0px;
+        padding: 10px 0px;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 15px;
+        box-shadow: black 0px 0px 10px;
+    }
+}
+
+@media (max-width: 300px) {
+    .contacts {
+        width: 200px;
+        margin: 0 calc( (50% - 100px));
+    }
+}

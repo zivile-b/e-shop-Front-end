@@ -1,0 +1,31 @@
+.hero {
+    position: relative;
+    height: unset;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.heroSlideshow>img {
+    width: 400px;
+    position: absolute;
+    top: 40%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 2s;
+}
+
+.seemore{
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+}
+
+@media only screen and (max-width: 460px) {
+    .heroSlideshow > img {
+        width: 300px;
+        
+    }
+}

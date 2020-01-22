@@ -1,0 +1,73 @@
+.foot {
+    width: 1000px;
+    height: 230px;
+    text-align: center;
+    margin: 0px calc((50% - 500px)) 20px;
+    color: rgb(208, 208, 208);
+}
+
+.foot>.socials {
+    padding: 10px 0 10px;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+
+.foot>.socials a {
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.foot>.socials>a:hover {
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 40px;
+}
+
+.foot>.fcontacts {
+    color: white;
+    padding: 20px;
+}
+
+.fcontacts a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.foot p {
+    padding: 3px 0;
+}
+
+.foot>.copyright {
+    display: inline-block;
+    border-top: 1px solid #fff;
+    width: 100%;
+    font-size: 15px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    .foot {
+        width: 100%;
+        margin: 0px 0px;
+    }
+}
+
+@media (max-width: 750px) {
+    .foot {
+        width: 100%;
+        margin: 0px 0px 20px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .foot p {
+        padding: 0px;
+    }
+}

@@ -1,0 +1,827 @@
+.meniu_row {
+    display: inline-block;
+    text-align: center;
+    width: 500px;
+    margin: 100px calc((100% - 500px) / 2) 20px;
+}
+
+.meniu_row>h3 {
+    display: inline-block;
+    font-family: monospace;
+    text-transform: uppercase;
+    line-height: 50px;
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 1px 1px 10px black;
+}
+
+.offerContainer {
+    display: inline-block;
+    width: 1200px;
+    margin-left: calc((100% - 1200px)/2);
+    text-align: center;
+}
+
+.meniu {
+    display: inline-block;
+    border-radius: 20px;
+    /* border: 1px solid black; */
+    margin: 15px;
+    height: 500px;
+    width: 300px;
+    transition: 0.3s;
+}
+
+@media all and (max-width:900px){
+    .meniu{
+        display: block;
+        margin-left: calc(50% - 150px);
+    }
+    .menu{
+        height: unset;
+        min-height: 400px;
+    }
+}
+
+.meniu:hover {
+    box-shadow: inset 0px 0px 50px #fff;
+}
+
+.meniu>img {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    margin: 15px calc((100% - 200px)/2);
+}
+
+.meniu>.offer {
+    font-weight: 900;
+    color: white;
+    line-height: 40px;
+    font-size: 40px;
+    text-align: center;
+    margin: 15px;
+    text-shadow: 2px 2px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.meniu>.price {
+    text-align: center;
+    margin: 15px;
+    line-height: 30px;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+    text-shadow: -1px -1px 0 #000,
+     1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+.meniu>.special {
+    display: block;
+    line-height: 30px;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: -1px -1px 0 #000,
+     1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+.meniu input {
+    margin: 10px;
+    padding: 10px 30px;
+}
+
+
+.fullmeniu {
+    display: block;
+    width: 180px;
+    margin: 5px calc((50% - 90px));
+    padding: 2px 2px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: monospace;
+    color: white;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+    width: 1000px;
+    height: unset;
+    min-height: 600px;
+    margin: 0 calc((100% - 1000px) / 2) 150px;
+    /* background-color: yellow; */
+}
+
+.hidden>.hidden-right {
+    display: inline-block;
+    float: right;
+    width: 270px;
+    height: 600px;
+    border: 1px white solid;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    /* background-color: lime; */
+}
+
+.hidden>.hidden-left {
+    display: inline-block;
+    float: left;
+    width: 730px;
+    height: 600px;
+    border: white 1px solid;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.hidden-navigation {
+    display: inline-block;
+    width: 730px;
+    height: 70px;
+    background-color: #ddd;
+    position: relative;
+    z-index: 1;
+}
+
+/**************mygtukai ********************/
+
+.hidden-btn {
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    position: absolute;
+    top: 5px;
+    cursor: pointer;
+}
+
+.menubtn1 {
+    left: 50px;
+}
+
+.menubtn2 {
+    left: 305px;
+}
+
+.menubtn3 {
+    left: 560px;
+}
+
+#hid1 {
+    position: absolute;
+    top: 64px;
+    left: -50px;
+}
+
+#hid2 {
+    position: absolute;
+    top: 64px;
+    left: -305px;
+}
+
+#hid3 {
+    position: absolute;
+    top: 64px;
+    left: -560px;
+}
+
+/**************mygtukai ********************/
+
+/**************hoveriai ********************/
+
+.hidden-btn:hover, .hidden-btn-active {
+    background-color: #666;
+    color: white;
+}
+
+
+/**************hoveriai ********************/
+
+/**************dropai ********************/
+
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #555;
+    min-width: 730px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.685);
+    z-index: 1;
+}
+
+.menu-dropdown>a {
+    color: white;
+    padding: 20px 70px;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+}
+
+.hidden a:hover {
+    color: white;
+    background-color: #000;
+}
+
+.menu-show {
+    display: inline-block!important;
+}
+
+.menuImg {
+    margin: 2px;
+    border: 1px solid white;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 120px;
+}
+
+.menuName {
+    display: block;
+    margin: 2px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.menuPrices {
+    display: block;
+    margin: 2px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    margin-top: -25px;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#left-menu {
+    display: grid;
+    grid-template-areas: "hiddenClass hiddenClass hiddenClass" "hiddenClass hiddenClass hiddenClass";
+    position: relative;
+    top: 160px;
+    left: 90px;
+    height: 400px;
+    overflow: hidden;
+    float: left;
+}
+
+.hiddenClass .imgsize {
+    width: 180px;
+    height: 120px;
+    cursor: pointer;
+}
+
+.hiddenClass {
+    display: grid;
+    grid-template-areas: 'tacos
+ tacos tacos';
+
+}
+
+/************** HiddenRight ********************/
+
+.hidden-right {
+    overflow: hidden;
+}
+
+.rightTop {
+    height: 150px;
+    width: 100%;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border-bottom: 1px #fff solid;
+}
+
+.rightBottom {
+    background-color: rgba(0,0,0,0.5);
+    height: 450px;
+    position: relative;
+    color:#fff;
+}
+
+.menuContacts {
+    text-align: center;
+    padding-top: 12px;
+    line-height: 20px;
+    font-size: 20px;
+    text-shadow: -1px -1px 0 #000, 
+    1px -1px 0 #000, 
+    -1px 1px 0 #000, 
+    1px 1px 0 #000;
+}
+
+.rightPosition {
+    text-align: center;
+    padding: 7px;
+}
+
+.truckMenu1 {
+    margin-bottom: 5px;
+    height: 50px;
+}
+
+.ContLogo {
+    width: 40px;
+    height: 40px;
+
+}
+
+.ContName {
+    line-height: 20px;
+    font-size: 18px;
+    text-shadow: -1px -1px 0 #000, 
+                1px -1px 0 #000, 
+                -1px 1px 0 #000, 
+                1px 1px 0 #000;
+}
+
+.ContTel {
+    font-size: 20px;
+    text-shadow: -1px -1px 0 #000, 
+                1px -1px 0 #000, 
+                -1px 1px 0 #000, 
+                1px 1px 0 #000;
+}
+
+
+.ContEmail {
+    font-size: 12px;
+    text-shadow: -1px -1px 0 #000, 
+                1px -1px 0 #000, 
+                -1px 1px 0 #000, 
+                1px 1px 0 #000;
+}
+
+.hd-line{
+    border-bottom: 1px solid #fff;
+}
+
+.total-item{
+    margin: 10px 10px;
+    font-size: 20px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid white;
+}
+
+#total{
+    position: absolute;
+    bottom: 60px;
+    font-size: 24px;
+}
+
+.shopPlace {
+    background-color: rgb(38, 77, 136);
+    color:#fff;
+    width: 100%;
+    height: 54px;
+    font-size: 32px;
+    overflow: hidden;
+    position:absolute;
+    bottom: 0;
+    padding: 5px 0px;
+}
+
+@media all and (max-width: 950px) {
+   
+   .hidden {
+       zoom: 70%;
+    }
+    .hidden-btn {
+        display: inline-block;
+        padding: 20px;
+        font-size: 20px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 15px;
+        position: absolute;
+        top: 5px;
+        cursor: pointer;
+    }
+}
+
+@media all and (max-width: 750px) {
+   
+    .hidden {
+        margin: 0 calc((100% - 1000px) / 2) 50px;
+        zoom: 60%;
+     }
+     .hidden-btn {
+        display: inline-block;
+        padding: 20px;
+        font-size: 20px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 15px;
+        position: absolute;
+        top: 5px;
+        cursor: pointer;
+    }
+ }
+
+ @media all and (max-width: 650px) {
+    .hidden {
+        margin: 0 calc((100% - 1000px) / 2) 50px;
+        zoom: 50%;
+     }
+     .hidden-btn {
+        display: inline-block;
+        padding: 16px;
+        font-size: 26px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 15px;
+        position: absolute;
+        top: 5px;
+        cursor: pointer;
+    }
+    .ContTel {
+        font-size: 26px;
+    }
+ }
+
+ @media all and (max-width: 530px) {
+
+    #left-menu {
+        top: 180px;
+        left: 150px;
+   }
+    .hidden {
+        width: 100%;
+    }
+        .hidden>.hidden-left {
+            width:85%;
+            display: inline-block;
+            height: 620px;
+            border: white 1px solid;
+            margin-left: 7.5%;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+     }
+     .hidden-navigation {
+        min-width: 845px;
+     }
+
+     .menuName {
+         font-size: 25px;
+         margin-bottom: 10px;
+     }
+
+     .hidden>.hidden-right {
+        display: grid;
+        grid-template-areas: " rightTop 
+        rightBottom"
+        ;
+
+        width: 85%;
+        height: 585px;
+        float: center;
+        border: white 1px solid;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        font-size: 30px;
+        margin: 0 7.5%;
+        
+  } 
+
+    .rightTop {
+        height: 100%;
+    }
+
+    .rightBottom {
+        height: 430px;
+        border-left: white 1px solid;
+    }  
+
+    .btn-removeItem {
+        float: right;
+        margin-right: 10px;
+        padding: 0px 10px;
+    }
+    .menubtn1 {
+        margin-left: 45px;
+    }
+    .menubtn2 {
+        margin-left: 45px;
+    }
+    .menubtn3 {
+        margin-left: 45px;
+    }
+}
+
+
+
+
+@media all and (max-width: 500px) {
+
+    #left-menu {
+        top: 180px;
+        left: 120px;
+   }
+    .hidden {
+        width: 100%;
+    }
+        .hidden>.hidden-left {
+            width:85%;
+            display: inline-block;
+            height: 620px;
+            border: white 1px solid;
+            margin-left: 7.5%;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+     }
+     .hidden-navigation {
+        min-width: 845px;
+     }
+
+     .menuName {
+         font-size: 25px;
+         margin-bottom: 10px;
+     }
+
+     .hidden>.hidden-right {
+        display: grid;
+        grid-template-areas: " rightTop 
+        rightBottom"
+        ;
+
+        width: 85%;
+        height: 585px;
+        float: center;
+        border: white 1px solid;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        font-size: 30px;
+        margin: 0 7.5%;
+        
+  } 
+
+    .rightTop {
+        height: 100%;
+    }
+
+    .rightBottom {
+        height: 430px;
+        border-left: white 1px solid;
+    }  
+
+    .btn-removeItem {
+        float: right;
+        margin-right: 10px;
+        padding: 0px 10px;
+    }
+    .menubtn1 {
+        margin-left: 20px;
+    }
+    .menubtn2 {
+        margin-left: 20px;
+    }
+    .menubtn3 {
+        margin-left: 20px;
+    }
+}
+
+
+
+@media all and (max-width: 470px) {
+
+    #left-menu {
+        top: 180px;
+        left: 120px;
+   }
+    .hidden {
+        width: 100%;
+    }
+        .hidden>.hidden-left {
+            width:85%;
+            display: inline-block;
+            height: 620px;
+            border: white 1px solid;
+            margin-left: 12.5%;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+     }
+     .hidden-navigation {
+        min-width: 845px;
+     }
+
+     .menuName {
+         font-size: 25px;
+         margin-bottom: 10px;
+     }
+
+     .hidden>.hidden-right {
+        display: grid;
+        grid-template-areas: " rightTop 
+        rightBottom"
+        ;
+
+        width: 85%;
+        height: 585px;
+        float: center;
+        border: white 1px solid;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        font-size: 30px;
+        margin: 0 2.5%;
+    
+        
+  } 
+
+    .rightTop {
+        height: 100%;
+    }
+
+    .rightBottom {
+        height: 430px;
+        border-left: white 1px solid;
+    }  
+
+    .btn-removeItem {
+        float: right;
+        margin-right: 10px;
+        padding: 0px 10px;
+    }
+    .menubtn1 {
+        margin-left: 20px;
+    }
+    .menubtn2 {
+        margin-left: 20px;
+    }
+    .menubtn3 {
+        margin-left: 20px;
+    }
+}
+
+
+@media all and (max-width: 440px) {
+
+    #left-menu {
+        top: 180px;
+        left: 100px;
+   }
+    .hidden {
+        width: 100%;
+        margin-left: -4.5%;
+
+    }
+        .hidden>.hidden-left {
+            width:85%;
+            display: inline-block;
+            height: 620px;
+            border: white 1px solid;
+            margin-left: 12.5%;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+     }
+     .hidden-navigation {
+        left: -30px;
+     }
+
+     .menuName {
+         font-size: 25px;
+         margin-bottom: 10px;
+     }
+
+     .hidden>.hidden-right {
+        display: grid;
+        grid-template-areas: " rightTop 
+        rightBottom"
+        ;
+
+        width: 85%;
+        height: 585px;
+        float: center;
+        border: white 1px solid;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        font-size: 30px;
+        margin: 0 2.5%;
+    
+        
+  } 
+
+    .rightTop {
+        height: 100%;
+    }
+
+    .rightBottom {
+        height: 430px;
+        border-left: white 1px solid;
+    }  
+
+    .btn-removeItem {
+        float: right;
+        margin-right: 10px;
+        padding: 0px 10px;
+    }
+    .menubtn1 {
+        margin-left: 20px;
+    }
+    .menubtn2 {
+        margin-left: 20px;
+    }
+    .menubtn3 {
+        margin-left: 20px;
+    }
+}
+
+
+@media all and (max-width: 440px) {
+
+    #hid {
+        
+    }
+
+    #left-menu {
+        top: 180px;
+        left: 35px;
+   }
+    .hidden {
+        width: 100%;
+        margin-left: -4.5%;
+
+    }
+        .hidden>.hidden-left {
+            width:85%;
+            display: inline-block;
+            height: 620px;
+            border: white 1px solid;
+            margin-left: 12.5%;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+     }
+     .hidden-navigation {
+        left: -30px;
+     }
+
+     .menuName {
+         font-size: 25px;
+         margin-bottom: 10px;
+     }
+
+     .hidden>.hidden-right {
+        display: grid;
+        grid-template-areas: " rightTop 
+        rightBottom"
+        ;
+
+        width: 85%;
+        height: 585px;
+        float: center;
+        border: white 1px solid;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        font-size: 30px;
+        margin: 0 2.5%;
+    
+  } 
+
+  .menu-dropdown {
+      padding: 0px;
+      margin-left: 0px;
+  }
+
+  .menu-dropdown > a {
+      width: 15%;
+  }
+
+    .rightTop {
+        height: 100%;
+    }
+
+    .rightBottom {
+        height: 430px;
+        border-left: white 1px solid;
+    }  
+
+    .btn-removeItem {
+        float: right;
+        margin-right: 10px;
+        padding: 0px 10px;
+    }
+    .menubtn1 {
+        margin-left: -15px;
+        font-size: 20px;
+    }
+    .menubtn2 {
+        margin-left: -55px;
+        font-size: 20px;
+    }
+    .menubtn3 {
+        margin-left: -115px;
+        font-size: 20px;
+    }
+    .imgsize {
+        width: 170px!important;
+    }
+}

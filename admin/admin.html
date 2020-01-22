@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='shortcut icon' type='image/x-icon' href='../img/favicon.ico' />
+    <title>Admin</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+
+<body>
+
+    <div class="nav top-menu">
+        <a href="../index.html" class="btn-main btn-logout">Log out</a>
+        <div id="today">2030 Jan 01</div>
+        <div id="current-container">Dashboard</div>
+    </div>
+
+    <div onclick="closeModal();" class="nav left-menu" id="left-menu">
+        <div class="left_list-logo">
+            <i class="fa fa-truck"></i>
+            <span>Food Trucks</span>
+        </div>
+        <div class="left_list-item" id="item-dashboard" onclick="loadCont('dashboard');">
+            <i class="fa fa-info-circle"></i>
+            <span>Dashboard</span>
+        </div>
+        <div class="left_list-item" id="item-users" onclick="loadCont('users');">
+            <i class="fa fa-user"></i>
+            <span>Users</span>
+        </div>
+        <div class="left_list-item" id="item-vendors" onclick="loadCont('vendors');">
+            <i class="fa fa-shopping-cart"></i>
+            <span>Vendors</span>
+        </div>
+        <div class="left_list-item" id="item-edit" onclick="loadCont('edit');">
+            <i class="fa fa-pencil"></i>
+            <span>Edit Vendors</span>
+        </div>
+        <div class="left_list-item" id="item-inbox" onclick="loadCont('inbox');">
+            <i class="fa fa-inbox"></i>
+            <span>Inbox</span>
+        </div>
+
+        <!-- \\\\\\\\\\\\FOOTER//////////// -->
+        <div class="foot">
+            <div class="fcontacts">
+                <h4>UAB "Maisto furgonai"</h4>
+                <p>Telefonas: +37061000000</p>
+                <p>El.Paštas: <a href="emailto:info@foodtrucks.lt"></a>info@foodtrucks.lt</p>
+                <p>Įm.kodas: 302964057 </p>
+                <p>PVM Kodas: LT100008128215</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- https://keenthemes.com/metronic/preview/demo1/index.html -->
+    <div id="content">
+        <div class="container cont-dashboard">
+            <div class="dash-box">Sales</div>
+            <div class="dash-box dash-box2">Profits</div>
+            <div class="dash-box dash-box3">Complaints</div>
+        </div>
+
+        <div class="container cont-users">
+            <table id="users-table">
+                <tr>
+                    <th>ID:</th>
+                    <th>Name:</th>
+                    <th>Email:</th>
+                    <th>Phone:</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="container cont-vendors">
+            <table id="vendor-table">
+                <tr>
+                    <th>ID:</th>
+                    <th>Name:</th>
+                    <th>Email:</th>
+                    <th>Phone:</th>
+                </tr>
+            </table>
+            <i onclick="loadCont('edit');" class="fa fa-plus"> Add User</i>
+
+        </div>
+
+        <div class="container cont-edit">
+            <table id="edit-table">
+                <tr>
+                    <th>ID:</th>
+                    <th>Name:</th>
+                    <th>Email:</th>
+                    <th>Phone:</th>
+                    <th>-</th>
+                </tr>
+            </table>
+            <i onclick="addNewUserModal();" class="fa fa-plus"> Add User</i>
+
+        </div>
+
+        <div class="container cont-inbox">
+            <table id="inbox-table">
+                <tr>
+                    <th>From:</th>
+                    <th>Email:</th>
+                    <th>-</th>
+                </tr>
+            </table>
+            <i onclick="sendMailModal();" class="sendm"> Send Message</i>
+        </div>
+    </div>
+
+
+    <!-- modals -->
+
+    <div class="lightbox" onclick="closeModal();" id="lightbox-adduser"></div>
+    <div class="modal" id="modal-adduser">
+        <div>
+            <p>Name:</p>
+            <input type="text">
+        </div>
+        <div>
+            <p>Email:</p>
+            <input type="text">
+        </div>
+        <div>
+            <p>Phone:</p>
+            <input type="text">
+        </div>
+        <div>
+            <input class='btn-main' type="button" onclick="closeModal();" value="Add vendor">
+        </div>
+    </div>
+
+    <div class="lightbox" onclick="closeModal();" id="lightbox-sendmail"></div>
+    <div class="modal" id="modal-sendmail">
+        <div>
+            <p>Email:</p>
+            <input type="text">
+        </div>
+        <div>
+            <p>Message:</p>
+            <textarea name="" id="msg-area" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <input class='btn-main' type="button" onclick="closeModal();" value="Send Message">
+        </div>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+body {
+    color: #fff;
+    background-image: url(../../img/bckg-truck.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: monospace;
+}
+
+#receipt {
+    width: 800px;
+    margin: 100px calc((50% - 400px)) 0;
+    padding: 50px;
+}
+
+#receipt>.progbar {
+    display: inline-block;
+    width: 100%;
+}
+
+#receipt>.ordernum {
+    display: inline-block;
+    width: 100%;
+    margin-top: 0px;
+    padding: 30px 0;
+    line-height: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    line-height: 60px;
+    font-size: 45px;
+    width: 100%;
+    color: #fff;
+}
+
+.OrNr {
+    display: inline-block;
+    width: 60px;
+    line-height: 60px;
+    margin-top: 20px;
+    border: solid 2px #fff;
+    font-size: 45px;
+}
+
+#receipt>.issues {
+    display: inline-block;
+    width: 50%;
+    margin: 50px 25%;
+    padding: 15px 0;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: bold;
+    text-align: center;
+    background-color: grey;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#receipt>.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #000c;
+}
+
+.overlay p {
+    width: 500px;
+    display: inline-block;
+    font-size: 70px;
+    font-weight: 900;
+    margin: 300px calc((50% - 250px));
+    text-align: center;
+}
+
+#receipt.showOverlay>.overlay {
+    display: inline-block;
+}
+
+@media (max-width: 1000px) {
+    #receipt {
+        width: 600px;
+        margin: 100px calc((50% - 300px)) 0;
+        padding: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    #receipt {
+        width: 400px;
+        margin: 0px calc((50% - 200px)) 0;
+        padding: 50px;
+    }
+    h3 {
+        font-size: 35px;
+    }
+    .OrNr {
+        width: 45px;
+        line-height: 45px;
+        margin-top: 20px;
+        font-size: 35px;
+    }
+    #receipt>.issues {
+        margin: 0px 25%;
+        padding: 30px;
+        font-size: 30px;
+        line-height: 25px;
+        border-radius: 50%;
+    }
+    .overlay p {
+        width: 200px;
+        font-size: 35px;
+        font-weight: 900;
+        margin: 150px calc((50% - 100px));
+        text-align: center;
+    }
+}

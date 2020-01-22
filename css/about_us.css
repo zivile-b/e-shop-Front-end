@@ -1,0 +1,122 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 1200px;
+    margin: 0px calc((100% - 1200px) / 2);
+    overflow: hidden;
+    position: relative;
+    height: unset;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+.about-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.about-item:nth-child(even) {
+    flex-direction: row-reverse;
+    
+}
+
+.about-item > img {
+    width: 290px;
+    height: auto;
+    border-radius: 20px;
+    animation-name: smoothImage;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+.about-item > p {
+    color:#fff;
+    font-size: 20px;
+    line-height: 30px;   
+    padding: 0 20px; 
+}
+
+.about-item p> span {
+    color:#fff;
+    font-size: 28px;
+    line-height: 30px;
+    font-weight: 900;
+}
+
+@keyframes smoothImage {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@media all and (max-width: 1200px) {
+
+    .about-item {
+        width: 900px;
+    }
+
+    .about {
+        width: 900px;
+        margin-left: calc((100% - 900px) / 2);
+    }
+}
+
+@media all and (max-width: 900px) {
+
+    .about-item {
+        width: 700px;
+    }
+
+    .about {
+        width: 700px;
+        margin-left: calc((100% - 700px) / 2);
+    }
+}
+
+@media all and (max-width: 800px) {
+
+    .about-item {
+        width: 500px;
+        display: block;
+        text-align: center;
+        float: unset;
+    }
+
+    .about {
+        width: 500px;
+        margin-left: calc((100% - 500px) / 2);
+    }
+
+    .about-item > p {
+        margin-top: 20px;
+        text-align: justify;
+    }
+
+    @media all and (max-width: 500px) {
+
+        .about-item {
+            width: 300px;
+            display: block;
+            text-align: center;
+            float: unset;
+        }
+    
+        .about {
+            width: 300px;
+            margin-left: calc((100% - 300px) / 2);
+            padding-top: 50px; /* atrodo geriau esant mazam width */
+        }
+    
+        .about-item > p {
+            margin-top: 20px;
+            text-align: justify;
+        }
+    }
+}

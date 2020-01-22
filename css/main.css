@@ -1,0 +1,11 @@
+body {
+    background-image: url("../img/bckg-truck.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero { /* pastumiu visa content nuo hederio pagal headerio auksti */
+    margin-top: 80px;
+}
